@@ -6,7 +6,7 @@ const utils = require("../../utils.js");
 const premiumFeatureRouter = function(app) {
   // @parameter permlink : permlink of the post
   // The post is select by {permlink, author} because permlink can be the same for different authors.
-  app.get("/premium/pixel/:name", async function(req, res) {
+  app.get("/premium/create-pixel/:name", async function(req, res) {
     res
       .status(200)
       .send(await premium.createPixel(req.params.name));
