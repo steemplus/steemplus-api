@@ -13,9 +13,11 @@ const premiumFeatureRouter = function(app) {
   });
 
   app.get("/premium/pixel/:name", async function(req, res) {
+    console.log(req.headers.referer);
+    console.log('-------------')
     res
       .status(200)
-      .sendFile(path.join(__dirname, '../../public',await premium.getPixel(req.params.name)));
+      .sendFile(path.join(__dirname, '../../public',await premium.getPixel(req.params.name, req.headers.referer)));
   });
 };
 
