@@ -28,5 +28,6 @@ exports.createPixel = async function(name) {
 }
 
 exports.getPixel = async function(name, source) {
+	console.log(source);
 	return `${name}.jpg`;
 }
