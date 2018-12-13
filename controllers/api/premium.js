@@ -22,7 +22,7 @@ exports.getUserFeatures = async function(username) {
 
 // Create a pixel for user's post stats
 exports.createPixel = async function(name) {
-	imgGen.generateImage(1, 1, 1, function(err, image) {
+	imgGen.generateImage(800, 600, 1, function(err, image) {
 	    fs.writeFileSync(`public/${name}.jpg`, image.data);
 	});
 }
